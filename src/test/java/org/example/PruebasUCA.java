@@ -38,18 +38,13 @@ public class PruebasUCA {
         login.click();
     }
 
-    public void addRemoveToCart(){
+    public void addToCart(){
         WebElement Element1Add = driver.findElement(By.cssSelector("#add-to-cart-sauce-labs-backpack"));
         WebElement Element2Add = driver.findElement(By.cssSelector("#add-to-cart-sauce-labs-bike-light"));
-
-        //WebElement Element1Remove = driver.findElement(By.cssSelector("#remove-to-cart-sauce-labs-backpack"));
-        //WebElement Element2Remove = driver.findElement(By.cssSelector("#remove-to-cart-sauce-labs-bike-light"));
 
         Element1Add.click();
         Element2Add.click();
 
-        //Element1Remove.click();
-        //Element2Remove.click();
     }
 
     public void clickCart(){
@@ -57,6 +52,14 @@ public class PruebasUCA {
         WebElement Cart = driver.findElement(By.cssSelector("#shopping_cart_container"));
         Cart.click();
 
+    }
+
+    public void removeToCart(){
+        WebElement Element1Remove = driver.findElement(By.cssSelector("#remove-sauce-labs-backpack"));
+        WebElement Element2Remove = driver.findElement(By.cssSelector("#remove-sauce-labs-bike-light"));
+
+        Element1Remove.click();
+        Element2Remove.click();
     }
 
     public void clickCheckout(){
@@ -70,8 +73,9 @@ public class PruebasUCA {
         setUp();
         writeInLogin();
         clickLogin();
-        addRemoveToCart();
+        addToCart();
         clickCart();
+        removeToCart();
         clickCheckout();
 
     }
