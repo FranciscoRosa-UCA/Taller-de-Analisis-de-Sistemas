@@ -56,10 +56,10 @@ public class PruebasUCA {
 
     public void removeToCart(){
         WebElement Element1Remove = driver.findElement(By.cssSelector("#remove-sauce-labs-backpack"));
-        WebElement Element2Remove = driver.findElement(By.cssSelector("#remove-sauce-labs-bike-light"));
+        //WebElement Element2Remove = driver.findElement(By.cssSelector("#remove-sauce-labs-bike-light"));
 
         Element1Remove.click();
-        Element2Remove.click();
+        //Element2Remove.click();
     }
 
     public void clickCheckout(){
